@@ -1,0 +1,508 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Header Styles */
+.header-title {
+    color: white;
+    font-size: 2rem; /* Reduced size for better fit */
+    background-image: url(https://images.vexels.com/media/users/3/101746/raw/da01a24b356c2778b7374e174b4806b9-light-blue-abstract-background.jpg);
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    text-align: center;
+    padding: 15px; /* Adjusted padding for better spacing */
+    margin-bottom: 20px; /* Slightly reduced margin */
+    animation: fadeIn 2s ease-in;
+}
+.footer-container {
+    background-image: url('https://images.vexels.com/media/users/3/101746/raw/da01a24b356c2778b7374e174b4806b9-light-blue-abstract-background.jpg');
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add some padding for spacing */
+    border-radius: 10px; /* Round the corners */
+    text-align: center; /* Center align the text */
+    margin: 20px auto; /* Center the footer horizontally with some margin */
+    max-width: 100%; /* Ensure it takes full width, adjust if necessary */
+    color: white; /* Set text color to white */
+}
+
+.footer-container footer {
+    margin-bottom: 10px; /* Add spacing between footer and the link */
+}
+
+.footer-container p {
+    font-weight: bold; /* Make the text bold */
+    margin: 0; /* Remove default margin */
+}
+
+.footer-container a {
+    color: white; /* Set the link color to white */
+    text-decoration: underline; /* Underline the link */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer-container a:hover {
+    color: lightblue; /* Change link color on hover */
+}
+
+
+
+/* Navigation Bar */
+nav {
+    background-color: transparent;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.navbar-brand a {
+    color: rgb(219, 143, 182);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;  
+    flex-direction: row;
+    text-align: center;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    max-height: 0; /* Hide initially */
+}
+
+.navbar-links.show {
+    max-height: 200px; /* Adjust as needed to fit content */
+}
+
+.navbar-links li {
+    margin: 0.5rem 1rem;
+}
+
+.navbar-links a {
+    color: rgb(138, 190, 227);
+    text-decoration: none;
+    padding: 1rem;
+    background-color: #333;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-links a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Hamburger Menu */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    height: 24px;
+    width: 30px;
+    justify-content: space-between;
+    animation: bounce 0.5s ease-in-out;
+}
+
+.nav-toggle-label span {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(31, 15, 15);
+    transition: transform 0.3s ease;
+}
+
+/* Show hamburger menu regardless of screen size */
+.nav-toggle:checked + .nav-toggle-label span {
+    background-color: rgb(157, 188, 235);
+}
+
+.nav-toggle:checked + .nav-toggle-label + .navbar-links {
+    max-height: 200px; /* Adjust as needed to fit content */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(0.7); }
+}
+
+/* Image Styling */
+.thumbnail {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Section Styling */
+.info-fieldset {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.content-image-left {
+    float: left;
+    margin-right: 15px;
+    width: 300px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.content-image-right {
+    float: right;
+    margin-left: 15px;
+    width: 300px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Feature List */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.feature-list li {
+    margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.footer p, .footer a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: lightblue;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #5b4040;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+thead {
+    background-color: #9abad0;
+    color: #333;
+    font-weight: bold;
+    animation: slideIn 0.5s ease-in-out; /* Add slide-in animation */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02); /* Slightly enlarge row on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.Breaks tr td {
+    background-color: black;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        background-color: #f9f9f9; /* Add background color for blocks */
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        background-color: #fff; /* Background color for table cells */
+        border: 1px solid #ddd; /* Border for cells */
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+}
+
+.discussion-section {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.discussion-section h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.discussion-section p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.discussion-form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.discussion-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.discussion-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.discussion-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.discussion-form button:hover {
+    background-color: #0056b3;
+}
+
+.featured-image {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-form legend {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.contact-form button:active {
+    background-color: #004494;
+    transform: translateY(0);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar-links {
+        flex-direction: column; /* Stack links vertically */
+        max-height: none; /* Allow full height */
+    }
+
+    .navbar-links li {
+        margin: 0.5rem 0; /* Adjust margin for vertical layout */
+    }
+
+    .content-image-left,
+    .content-image-right {
+        width: 100%; /* Make images full width on small screens */
+        float: none; /* Remove float */
+        margin: 0; /* Reset margin */
+    }
+
+    .discussion-form,
+    .contact-form {
+        width: 90%; /* Make forms wider on small screens */
+    }
+
+    .featured-image {
+        width: 100%; /* Make featured image full width */
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block; /* Keep existing styles for tables */
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        background-color: #fff; /* Background color for table cells */
+        border: 1px solid #ddd; /* Border for cells */
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 2.5rem; /* Adjust header size for smaller screens */
+    }
+
+    .discussion-section h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .discussion-section p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+
+    .contact-form button,
+    .discussion-form button {
+        width: 100%; /* Make buttons full width */
+    }
+}
